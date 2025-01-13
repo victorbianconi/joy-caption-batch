@@ -214,7 +214,7 @@ parser.add_argument(
     help="Output format for caption files.",
 )
 parser.add_argument(
-    "--input-dir",
+    "--input_dir",
     type=str,
     help=f"Input directory for images. Default: '{INPUT_FOLDER}'",
 )
@@ -285,8 +285,8 @@ def main():
     logging.info(f"Arguments: {args}")
     
     # Update INPUT_FOLDER and OUTPUT_FOLDER if provided via arguments
-    if args["input-dir"]:
-        INPUT_FOLDER = Path(args["input-dir"])
+    if args.input_dir:
+        INPUT_FOLDER = Path(args.input_dir)
         # If output directory not specified, set it to input directory
         if not args["output-dir"]:
             OUTPUT_FOLDER = INPUT_FOLDER
