@@ -285,15 +285,15 @@ def main():
     logging.info(f"Arguments: {args}")
     
     # Update INPUT_FOLDER and OUTPUT_FOLDER if provided via arguments
-    if args.input_dir:
-        INPUT_FOLDER = Path(args.input_dir)
+    if args["input-dir"]:
+        INPUT_FOLDER = Path(args.["input-dir"])
         # If output directory not specified, set it to input directory
-        if not args.output_dir:
+        if not args["output-dir"]:
             OUTPUT_FOLDER = INPUT_FOLDER
 
     # Update OUTPUT_FOLDER if provided
-    if args.output_dir:
-        OUTPUT_FOLDER = Path(args.output_dir)
+    if args["output-dir"]:
+        OUTPUT_FOLDER = Path(args["output-dir"])
 
     # Determine if any image sources are provided
     image_sources_provided = any([args.glob, args.filelist, args.input_folder])
