@@ -219,7 +219,7 @@ parser.add_argument(
     help=f"Input directory for images. Default: '{INPUT_FOLDER}'",
 )
 parser.add_argument(
-    "--output-dir",
+    "--output_dir",
     type=str,
     help=f"Output directory for captions. Default: Same as input directory",
 )
@@ -296,6 +296,7 @@ def main():
         OUTPUT_FOLDER = Path(args.output_dir)
 
     # Determine if any image sources are provided
+    logging.info(f"Input folder: {args.input_folder}")
     image_sources_provided = any([args.glob, args.filelist, args.input_folder])
 
     # If no image sources are provided, default to using the input folder
