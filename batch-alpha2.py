@@ -286,7 +286,7 @@ def main():
     
     # Update INPUT_FOLDER and OUTPUT_FOLDER if provided via arguments
     if args["input-dir"]:
-        INPUT_FOLDER = Path(args.["input-dir"])
+        INPUT_FOLDER = Path(args["input-dir"])
         # If output directory not specified, set it to input directory
         if not args["output-dir"]:
             OUTPUT_FOLDER = INPUT_FOLDER
